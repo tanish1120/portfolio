@@ -2,7 +2,14 @@
 
 import { useEffect } from "react";
 
+const isTouchDevice =
+    typeof window !== "undefined" &&
+    window.matchMedia("(pointer: coarse)").matches;
+
 export default function CursorGlow() {
+
+  if (isTouchDevice) return null;
+
   useEffect(() => {
     const glow = document.getElementById("cursor-glow");
 

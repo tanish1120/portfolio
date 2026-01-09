@@ -10,25 +10,10 @@ export default function Home() {
     <main className="min-h-screen bg-gradient-to-br from-black via-zinc-900 to-black text-white">
       <CursorGlow />
 
-      {/* NAVBAR */}
-      <nav className="max-w-7xl mx-auto flex justify-between items-center px-6 py-6">
-        <h1 className="text-3xl font-semibold tracking-wide relative">
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-zinc-400">
-            Tanish Rathore
-          </span>
-        </h1>
-        <div className="flex gap-6 text-sm text-zinc-400">
-          <Link href="/projects" className="hover:text-white">
-            Projects
-          </Link>
-          {/* <Link href="/contact" className="hover:text-white">
-            Contact
-          </Link> */}
-        </div>
-      </nav>
+      
 
       {/* HERO */}
-      <section className="max-w-7xl mx-auto px-6 py-24 grid lg:grid-cols-2 gap-16 items-center">
+      <section className="max-w-7xl mx-auto px-6 py-16 sm:py-24 grid lg:grid-cols-2 gap-16 items-center">
         {/* LEFT */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -58,7 +43,7 @@ export default function Home() {
 
 
           <p className="mt-6 text-zinc-400 max-w-xl leading-relaxed">
-            I’m Tanish Rathore — a Full-Stack Developer specializing in MERN
+            I’m Tanish Rathore a Full-Stack Developer specializing in MERN
             Stack, Next.js, and TypeScript. I build clean UIs, robust APIs, and
             production-ready applications with a strong focus on performance,
             scalability, and code quality.
@@ -69,7 +54,7 @@ export default function Home() {
             ● Currently open to opportunities
           </p>
 
-          <div className="mt-8 flex gap-4">
+          <div className="mt-8 flex gap-4 flex-col sm:flex-row">
             <Link
               href="/projects"
               className="inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-500 px-6 py-3 rounded-lg font-medium transition"
@@ -177,7 +162,7 @@ export default function Home() {
 
 
       {/* EXPERIENCE */}
-      <section className="max-w-7xl mx-auto px-6 py-24 relative">
+      <section className="max-w-7xl mx-auto px-6 py-16 sm:py-24 relative">
         <h2 className="relative inline-block group text-3xl md:text-4xl font-bold mb-20">
           <span className="absolute -bottom-2 left-0 h-[3px] w-12 group-hover:w-full duration-150 ease-in bg-indigo-500 rounded-full" />
           Experience
@@ -186,7 +171,7 @@ export default function Home() {
 
 
         {/* Shift whole section slightly left */}
-        <div className="relative max-w-6xl mx-auto -translate-x-6">
+        <div className="relative max-w-6xl mx-auto md:-translate-x-6">
 
           {/* Timeline line */}
           <div className="absolute left-[40%] top-0 bottom-0 w-px bg-zinc-800 hidden md:block" />
@@ -340,7 +325,7 @@ export default function Home() {
       </section>
 
       {/* FEATURED PROJECTS */}
-      <section className="max-w-7xl mx-auto px-6 py-24">
+      <section className="max-w-7xl mx-auto px-6 py-16 sm:py-24">
         <h2 className="relative group inline-block text-3xl md:text-4xl font-bold mb-20">
           <span className="absolute -bottom-2 left-0 h-[3px] w-12 group-hover:w-full duration-150 ease-in bg-indigo-500 rounded-full" />
           Featured Projects
@@ -405,7 +390,7 @@ export default function Home() {
 
 
       {/* CTA */}
-      <section className="max-w-7xl mx-auto px-6 py-24">
+      <section className="max-w-7xl mx-auto px-6 py-16 sm:py-24">
         <div className="relative bg-zinc-900 border border-zinc-800 rounded-3xl p-12 text-center overflow-hidden">
           <div className="absolute -inset-1 bg-indigo-500/20 blur-2xl opacity-30" />
 
