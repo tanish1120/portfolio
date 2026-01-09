@@ -43,7 +43,7 @@ export default function Home() {
 
 
           <p className="mt-6 text-zinc-400 max-w-xl leading-relaxed">
-            I’m Tanish Rathore — a Full-Stack Developer specializing in MERN
+            I’m Tanish Rathore a Full-Stack Developer specializing in MERN
             Stack, Next.js, and TypeScript. I build clean UIs, robust APIs, and
             production-ready applications with a strong focus on performance,
             scalability, and code quality.
