@@ -334,6 +334,34 @@ export default function Home() {
         <div className="grid md:grid-cols-2 gap-12">
           {/* Project 1 */}
           <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-8 hover:border-indigo-500/40 transition">
+            <h3 className="text-xl font-semibold">BrieflyAI</h3>
+            <p className="mt-3 text-zinc-400 leading-relaxed">
+              AI-powered note-taking web app that summarizes long notes and extracts 
+              last-minute keywords using local LLMs. Designed for fast revision with 
+              controllable summary length and secure authentication.
+            </p>
+
+            <div className="mt-4 flex flex-wrap gap-2 text-xs">
+              {["Next.js 14", "TypeScript", "Ollama (Phi-3)", "PostgreSQL", "NextAuth"].map((tech) => (
+                <span
+                  key={tech}
+                  className="bg-zinc-800 px-3 py-1 rounded-full text-zinc-300"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+
+            <Link
+              href="/projects"
+              className="inline-block mt-6 text-indigo-400 hover:text-indigo-300 font-medium"
+            >
+              View project →
+            </Link>
+          </div>
+
+          {/* Project 2 */}
+          <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-8 hover:border-indigo-500/40 transition">
             <h3 className="text-xl font-semibold">Chess King</h3>
             <p className="mt-3 text-zinc-400 leading-relaxed">
               A real-time multiplayer chess platform with live gameplay,
@@ -359,32 +387,6 @@ export default function Home() {
             </Link>
           </div>
 
-          {/* Project 2 */}
-          <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-8 hover:border-indigo-500/40 transition">
-            <h3 className="text-xl font-semibold">Medium Clone</h3>
-            <p className="mt-3 text-zinc-400 leading-relaxed">
-              A full-featured blogging platform with authentication,
-              markdown editor, and optimized backend queries.
-            </p>
-
-            <div className="mt-4 flex flex-wrap gap-2 text-xs">
-              {["Next.js", "Prisma", "PostgreSQL", "TypeScript"].map((tech) => (
-                <span
-                  key={tech}
-                  className="bg-zinc-800 px-3 py-1 rounded-full text-zinc-300"
-                >
-                  {tech}
-                </span>
-              ))}
-            </div>
-
-            <Link
-              href="/projects"
-              className="inline-block mt-6 text-indigo-400 hover:text-indigo-300 font-medium"
-            >
-              View project →
-            </Link>
-          </div>
         </div>
       </section>
 
