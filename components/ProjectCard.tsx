@@ -7,6 +7,7 @@ type Props = {
     tech: string;
     image: string;
     github: string;
+    description?: string;
 };
 
 
@@ -14,7 +15,7 @@ const isTouchDevice =
     typeof window !== "undefined" &&
     window.matchMedia("(pointer: coarse)").matches;
 
-export default function ProjectCard({ title, tech, image, github }: Props) {
+export default function ProjectCard({ title, tech, image, github, description }: Props) {
     const cardRef = useRef<HTMLDivElement>(null);
     const glowRef = useRef<HTMLDivElement>(null);
 
@@ -95,11 +96,11 @@ export default function ProjectCard({ title, tech, image, github }: Props) {
             <div
                 ref={cardRef}
                 className="
-          relative h-full rounded-2xl overflow-hidden
-          bg-zinc-900 border border-zinc-800
-          transition-transform duration-300 ease-out
-          will-change-transform
-        "
+                    group relative h-full rounded-2xl overflow-hidden
+                    bg-zinc-900 border border-zinc-800
+                    transition-transform duration-700 ease-out
+                    will-change-transform
+                "
             >
                 <a
                     href={github}
@@ -111,10 +112,10 @@ export default function ProjectCard({ title, tech, image, github }: Props) {
                     <div
                         ref={glowRef}
                         className="
-            pointer-events-none absolute inset-0
-            opacity-0 transition-opacity duration-200
-            z-10
-          "
+                            pointer-events-none absolute inset-0
+                            opacity-0 transition-opacity duration-200
+                            z-10
+                        "
                     />
 
                     {/* Image */}
@@ -128,10 +129,48 @@ export default function ProjectCard({ title, tech, image, github }: Props) {
                     <div className="absolute inset-0 bg-black/40 z-20" />
 
                     {/* Content */}
-                    <div className="absolute bottom-0 left-0 right-0 p-6 z-30">
-                        <h3 className="text-xl font-semibold">{title}</h3>
-                        <p className="mt-1 text-sm text-zinc-400">{tech}</p>
+                    <div
+                        className="
+                            absolute bottom-0 left-0 right-0 z-30
+                            group
+                        "
+                    >
+                        <div
+                            className="
+                                relative p-6
+                                bg-black/45 backdrop-blur-md
+                                transition-all duration-700 ease-out
+                                group-hover:bg-black/65
+                            "
+                        >
+                            <h3 className="text-xl font-semibold text-white">
+                                {title}
+                            </h3>
+
+                            <p className="mt-1 text-sm text-zinc-300">
+                                {tech}
+                            </p>
+
+                            {/* Description (hidden by default) */}
+                            {description && (
+                                <p
+                                    className="
+                                        mt-4 text-sm text-zinc-300 leading-relaxed
+                                        overflow-hidden
+                                        max-h-0 opacity-0 translate-y-2
+                                        transition-all duration-700 ease-in-out
+                                        group-hover:max-h-32
+                                        group-hover:opacity-100
+                                        group-hover:translate-y-0
+                                    "
+                                >
+                                    {description}
+                                </p>
+
+                            )}
+                        </div>
                     </div>
+
                 </a>
             </div>
         </div>
