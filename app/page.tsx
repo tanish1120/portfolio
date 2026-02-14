@@ -1,9 +1,11 @@
 "use client";
 
 import CursorGlow from "@/components/CursorGlow";
+// import LeetCodeStats from "@/components/LeetCodeStats";
 import { motion } from "framer-motion";
 import { Github, Linkedin, Mail, ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { SiLeetcode } from "react-icons/si";
 
 export default function Home() {
   return (
@@ -87,6 +89,14 @@ export default function Home() {
               <Linkedin />
             </a>
             <a
+              href="https://leetcode.com/tanish1120"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-white"
+            >
+              <SiLeetcode size={20} />
+            </a>
+            <a
               href="mailto:rathoretanish11@gmail.com"
               className="hover:text-white"
             >
@@ -156,6 +166,16 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      {/* LEETCODE STATS */}
+      {/* <section className="max-w-7xl mx-auto px-6 py-14">
+        <h2 className="relative inline-block group text-3xl md:text-4xl font-bold mb-8">
+          <span className="absolute -bottom-2 left-0 h-[3px] w-12 group-hover:w-full duration-150 ease-in bg-indigo-500 rounded-full" />
+          LeetCode Stats
+        </h2>
+
+        <LeetCodeStats username="tanish1120" />
+      </section> */}
 
       
 
